@@ -47,7 +47,7 @@ var addPark_1 = __importDefault(require("./database/addPark"));
 var getParks_1 = __importDefault(require("./database/getParks"));
 var app = (0, express_1.default)();
 app.use(express_1.default.json());
-var PORT = '3000';
+var PORT = process.env.PORT || 3000;
 (0, connection_1.connectDB)();
 app.get('/api/test', function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
     return __generator(this, function (_a) {
